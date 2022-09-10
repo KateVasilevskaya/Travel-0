@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="./img/svg/around.ico"
+      rel="shortcut icon"
+      type="image/vnd.microsoft.icon"
+    />
+    <script src="./index.js" defer></script>
+    <title>Travel Portal</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="wrapper header_content">
+        <div class="header_logo">
+          <a href="/" class="header_logo-link">
+            <picture>
+              <source
+                srcset="./img/svg/logo390.svg"
+                media="(max-width: 850px)"
+              />
+              <img src="./img/svg/logo.svg" alt="logo" />
+            </picture>
+          </a>
+        </div>
+        <nav class="header_nav">
+          <label class="burger">
+            <span class="burger_line line_one"></span>
+            <span class="burger_line line_two"></span>
+            <span class="burger_line line_three"></span>
+            <input type="button" class="burger-btn" />
+          </label>
+
+          <ul class="header_list">
+            <li class="header_item">
+              <a href="#works" class="header_link">How It Works</a>
+            </li>
+            <li class="header_item">
+              <a href="#trip" class="header_link">Plan Your Trip</a>
+            </li>
+            <li class="header_item">
+              <a href="#Destionations" class="header_link">Destinations</a>
+            </li>
+            <li class="header_item">
+              <a href="#stories" class="header_link">Travel Stories</a>
+            </li>
+
+            <li class="header_item header_item_li_burger">
+              <button class="button_account">
+                <a href="" class="header_link">Account</a>
+              </button>
+            </li>
+            <li class="header_item header_item_li_burger">
+              <a href="" class="header_link">Social Media</a>
+            </li>
+          </ul>
+        </nav>
+        <form action="">
+          <button id="Login_heder" class="header_button Login">Login</button>
+        </form>
+      </div>
+
+      <div class="pop_up hidden">
+        <div class="popup_content popup_sing_content">
+          <p class="popup_p">Create account</p>
+          <from>
+            <div class="emailBox">
+              <label class="label_popup" for="message">E-mail</label>
+              <input class="input_popup" type="text" size="40" />
+              <br />
+              <label class="label_popup" for="message">Password</label>
+              <input class="input_popup" type="text" size="40" />
+            </div>
+          </from>
+          <button class="popup_sign"><p class="sign_in">Sign In</p></button>
+          <div class="popup_end"></div>
+          <div class="popup_register_login">
+            <p class="p_don_have">Already have an account?</p>
+            <a class="a_popup_register">Log in</a>
+          </div>
+        </div>
+        <div class="popup_content popup_visible">
+          <p class="popup_p">Log in to your account</p>
+          <button class="popup_button popup_facebook">
+            <img
+              class="popup_img"
+              src="./img/svg/FacebookLogo.svg"
+              alt="Facebook"
+            />
+            <p class="p_button_popup">Sign In with Facebook</p>
+          </button>
+          <button class="popup_button popup_gogle">
+            <img
+              class="popup_img"
+              src="./img/svg/GooglegLogo.svg"
+              alt="Google"
+            />
+            <p class="p_button_popup">Sign In with Google</p>
+          </button>
+          <div class="span_or">
+            <div class="popup_or"></div>
+            <p class="oror">or</p>
+            <div class="popup_or"></div>
+          </div>
+          <from>
+            <div class="emailBox">
+              <label class="label_popup" for="message">E-mail</label>
+              <input class="input_popup input_text" type="text" size="40" />
+              <br />
+              <label class="label_popup" for="message">Password</label>
+              <input class="input_popup input_text1" type="text" size="40" />
+            </div>
+          </from>
+          <button onclick="myFunction()" class="popup_sign">
+            <p class="sign_in">Sign In</p>
+          </button>
+          <a class="popup_a_Forgot">Forgot Your Password?</a>
+          <div class="popup_end"></div>
+          <div class="popup_register">
+            <p class="p_don_have">Don’t have an account?</p>
+            <button class="button_register">Register</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="top_bar top-bar400">
+        <div class="wrapper">
+          <section id="works" class="preview">
+            <div class="previem_item">
+              <h1>Explore the beauty of the World</h1>
+              <p class="main_p">
+                Receive personalized recommendations for countries, hotels,
+                activities and more
+              </p>
+              <div class="Rectangle_8">
+                <p class="Rectangle_8_p">What would you like to do?</p>
+
+                <button class="Rectangle_button FindMore">
+                  Start Planning
+                </button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <section id="trip" class="steps">
+        <h2>3 STEPS TO THE PERFECT TRIP</h2>
+        <div class="steps_content">
+          <div class="steps_item1">
+            <picture>
+              <source
+                srcset="./img/svg/Frame13.svg"
+                media="(max-width: 850px)"
+              />
+              <img src="./img/svg/Frame28.svg" alt="Frame28" />
+            </picture>
+          </div>
+          <div class="steps_item2">
+            <picture>
+              <source
+                srcset="./img/svg/Frame14.svg"
+                media="(max-width: 850px)"
+              />
+              <img src="./img/svg/Frame11.svg" alt="Frame11" />
+            </picture>
+          </div>
+          <div class="steps_item3">
+            <picture>
+              <source
+                srcset="./img/svg/Frame15.svg"
+                media="(max-width: 850px)"
+              />
+              <img src="./img/svg/Frame12.svg" alt="Frame12" />
+            </picture>
+          </div>
+        </div>
+        <div class="steps_pp">
+          <p class="steps_p">Tell us what you want to do</p>
+          <p class="steps_p steps_p2">Share us preferable dates</p>
+          <p class="steps_p">We will give you recommendations</p>
+        </div>
+      </section>
+      <section id="Destionations" class="destinations">
+        <div>
+          <h2>POPULAR DESTINATIONS</h2>
+          <div class="desy_items">
+            <button class="arrow_spain button_left button_arrow">
+              <img
+                class="arrow_img"
+                src="./img/svg/Vector_left.svg"
+                alt="left"
+              />
+            </button>
+            <button class="arrow_spain button_right button_arrow">
+              <img
+                class="arrow_img"
+                src="./img/svg/Vector_right.svg"
+                alt="right"
+              />
+            </button>
+
+            <div class="items_destinations">
+              <div id="1-slide" class="desy_item">
+                <picture>
+                  <source
+                    srcset="./img/Rectangle26.jpg"
+                    media="(max-width: 850px)"
+                  />
+                  <img
+                    class="destin_img"
+                    src="./img/Rectangle23.jpg"
+                    alt="Rectangle23"
+                  />
+                </picture>
+
+                <span class="name_img">SPAIN</span>
+              </div>
+              <div id="2-slide" class="desy_item">
+                <picture>
+                  <source
+                    srcset="./img/Rectangle34.jpg"
+                    media="(max-width: 850px)"
+                  />
+                  <img
+                    class="destin_img"
+                    src="./img/Rectangle24.jpg"
+                    alt="Rectangle24"
+                  />
+                </picture>
+                <span class="name_img">JAPAN</span>
+              </div>
+              <div id="3-slide" class="desy_item">
+                <picture>
+                  <source
+                    srcset="./img/Rectangle35.jpg"
+                    media="(max-width: 850px)"
+                  />
+                  <img
+                    class="destin_img"
+                    src="./img/Rectangle25.jpg"
+                    alt="Rectangle25"
+                  />
+                </picture>
+                <span class="name_img">USA</span>
+              </div>
+            </div>
+          </div>
+          <div class="slaider_controls">
+            <input
+              id="1-contro"
+              class="input_destinations"
+              name="slaider_control"
+              type="radio"
+            />
+            <label for="contro1" class="slaider_control_label"> </label>
+            <input
+              id="2-contro"
+              class="input_destinations"
+              name="slaider_control"
+              type="radio"
+              checked
+            />
+            <label for="contro2" class="slaider_control_label"> </label>
+            <input
+              id="3-contro"
+              class="input_destinations"
+              name="slaider_control"
+              type="radio"
+            />
+            <label for="contro3" class="slaider_control_label"> </label>
+          </div>
+
+          <button class="button FindMore">
+            <img class="img_button" src="./img/svg/Vector.svg" />
+            <span class="arrow">Find More</span>
+          </button>
+        </div>
+      </section>
+      <section id="stories" class="stories">
+        <div class="stories_name">
+          <h2>TRAVEL STORIES</h2>
+
+          <div class="img_st">
+            <div class="wrapper_stories">
+              <div class="wrapper">
+                <div class="stories_items">
+                  <div class="stories_item">
+                    <img
+                      class="stories_img"
+                      src="./img/Rectangle29.jpg"
+                      alt="Rectangle29"
+                    />
+
+                    <h3>10 Photos of Attractive Thailand</h3>
+                    <p class="p_storie">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                      sint occaecat cupidatat non proident, sunt in culpa qui
+                      officia deserunt mollit anim id est laborum.Lorem ipsum
+                      dolor sit amet, consectetur adipiscing elit...
+                    </p>
+
+                    <a class="p_mobil" href=""> Read More </a>
+                  </div>
+                  <div class="stories_item">
+                    <picture>
+                      <source
+                        srcset="./img/Rectangle16.jpg"
+                        media="(max-width: 850px)"
+                      />
+                      <img
+                        class="stories_img"
+                        src="./img/Rectangle30.jpg"
+                        alt="Rectangle30"
+                      />
+                    </picture>
+                    <h3>Canyonlands National Park, Utah</h3>
+                    <p class="p_storie">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                      sint occaecat cupidatat non proident, sunt in culpa qui
+                      officia deserunt mollit anim id est laborum.Lorem ipsum
+                      dolor sit amet, consectetur adipiscing elit...
+                    </p>
+                    <a class="p_mobil" href=""> Read More </a>
+                  </div>
+                  <div class="stories_item">
+                    <picture>
+                      <source
+                        srcset="./img/Rectangle27.jpg"
+                        media="(max-width: 850px)"
+                      />
+                      <img
+                        class="stories_img"
+                        src="./img/Rectangle31.jpg"
+                        alt="Rectangle31"
+                      />
+                    </picture>
+                    <h3>I left my heart in the Mountains!</h3>
+                    <p class="p_storie">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                      sint occaecat cupidatat non proident, sunt in culpa qui
+                      officia deserunt mollit anim id est laborum.Lorem ipsum
+                      dolor sit amet, consectetur adipiscing elit...
+                    </p>
+                    <a class="p_mobil" href=""> Read More </a>
+                  </div>
+                  <div class="stories_item">
+                    <picture>
+                      <source
+                        srcset="./img/Rectangle17.jpg"
+                        media="(max-width: 850px)"
+                      />
+                      <img
+                        class="stories_img"
+                        src="./img/Rectangle32.jpg"
+                        alt="Rectangle32"
+                      />
+                    </picture>
+                    <h3>The Longest journey in my life!</h3>
+                    <p class="p_storie">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                      sint occaecat cupidatat non proident, sunt in culpa qui
+                      officia deserunt mollit anim id est laborum.Lorem ipsum
+                      dolor sit amet, consectetur adipiscing elit...
+                    </p>
+                    <a class="p_mobil" href=""> Read More </a>
+                  </div>
+
+                  <button class="button FindMore stories_button">
+                    <img class="img_button" src="./img/svg/Vector.svg" />
+                    <span class="arrow"> See More</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="wrapper_foter">
+      <p class="foter_p">All Rights Reserved © Travel Portal</p>
+      <ul class="foter_list">
+        <li class="foter_li">
+          <a href="https://rs.school/js-stage0/" class="foter_item instagramm">
+          </a>
+        </li>
+        <li class="foter_li">
+          <a
+            href="https://katevasilevskaya.github.io/rsschool-cv/"
+            class="foter_item video"
+          >
+          </a>
+        </li>
+        <li class="foter_li">
+          <a
+            href="https://github.com/KateVasilevskaya"
+            class="foter_item twitter"
+          >
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

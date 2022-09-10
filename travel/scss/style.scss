@@ -1,0 +1,1422 @@
+@import url("https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,400;0,700;1,400;1,700&family=Tai+Heritage+Pro:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,500;1,500&family=Tai+Heritage+Pro:wght@400;700&display=swap");
+@import "./variables.scss";
+
+html {
+  box-sizing: border-box;
+
+  scroll-behavior: smooth;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Aleo";
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: normal;
+  color: #0d606f;
+  width: 100%;
+  margin: auto;
+}
+
+button {
+  border: none;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  @media (max-width: $desktop-width) {
+    margin: 0 40px;
+  }
+  @media (max-width: $tablet-width) {
+    margin: auto;
+  }
+
+  @media (max-width: $mobel-width) {
+    margin: 0 16px 0 16px;
+  }
+}
+
+/*Header styles start */
+
+.header {
+  width: 100%;
+  position: absolute;
+
+  background: rgba(242, 120, 92, 0.7);
+  box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
+
+  @media (max-width: $mobel-width) {
+    background: none;
+    box-shadow: none;
+  }
+
+  &_list {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 42px;
+    @media (max-width: $desktop-width) {
+      justify-content: flex-end;
+      margin-right: 10px;
+      gap: 20px;
+    }
+    @media (max-width: $tablet-width) {
+      gap: 0.5px;
+      margin-right: 0px;
+    }
+    @media (max-width: $mobel-width) {
+      width: 0;
+      padding: 44px 15px 30px 44px;
+      background-color: #f2785c;
+      position: fixed;
+      right: -60px;
+      top: 0;
+      border-radius: 10px;
+      margin: 0;
+      flex-direction: column;
+      visibility: hidden;
+      width: 0;
+      transition-duration: 500ms;
+      gap: 10px;
+    }
+  }
+
+  &_item {
+    display: flex;
+    align-items: center;
+    min-height: 90px;
+    font-family: "Red Hat Text";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    text-decoration: none;
+    color: #ffffff;
+    @media (max-width: $tablet-width) {
+      min-height: 0;
+    }
+    @media (max-width: $mobel-width) {
+      min-height: 0;
+      font-size: 16px;
+      line-height: 21px;
+    }
+  }
+}
+
+.open {
+  visibility: visible;
+  box-shadow: 0px 4px 3px rgba(13, 96, 111, 0.25);
+  right: 0;
+  width: 165px;
+  align-items: end;
+}
+
+.header_logo {
+  margin-right: 160px;
+  @media (max-width: $tablet-width) {
+    margin-top: 0px;
+  }
+  @media (max-width: $mobel-width) {
+    margin-top: 44px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .header_logo {
+    margin-right: 0;
+  }
+}
+.header_link {
+  height: 21px;
+  font-family: "Red Hat Text";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s, transform 1s;
+  white-space: nowrap;
+  @media (max-width: $tablet-width) {
+    font-size: 12px;
+  }
+  @media (max-width: $mobel-width) {
+    font-size: 16px;
+  }
+}
+
+.header_content {
+  display: flex;
+  align-items: center;
+  max-height: 90px;
+  @media (max-width: $mobel-width) {
+    align-items: flex-end;
+  }
+}
+
+.header_item:hover,
+.header_item::after {
+  opacity: 0.75;
+}
+.header_nav {
+  flex-grow: 1;
+  @media (max-width: $tablet-width) {
+    flex-grow: 0, 5;
+  }
+  @media (max-width: $mobel-width) {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+.header_button {
+  width: 103px;
+  height: 41px;
+
+  background: #0d606f;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+    0px 2px 3px rgba(13, 96, 111, 0.16);
+  border-radius: 10px;
+  @media (max-width: $screen-width) {
+    width: 80px;
+    height: 30px;
+  }
+  @media (max-width: $tablet-width) {
+    width: 40px;
+    height: 15px;
+  }
+  @media (max-width: $mobel-width) {
+    display: none;
+  }
+}
+.Login {
+  text-decoration: none;
+  font-family: "Red Hat Text";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+
+  color: #ffffff;
+  @media (max-width: $tablet-width) {
+    font-size: 8px;
+    line-height: 11px;
+  }
+}
+.Login:hover,
+.Login::after {
+  opacity: 0.95;
+  color: rgb(77, 151, 186);
+  cursor: pointer;
+}
+
+/*Header styles end */
+
+/*Preview styles start */
+.top_bar {
+  background: url(../img/garrett-parker-DlkF4-dbCOU-unsplash\ 1.jpg) no-repeat;
+  background-size: 100%;
+  @media (max-width: $tablet-width) {
+  }
+
+  @media (max-width: $mobel-width) {
+    background: linear-gradient(180deg, #0d606f 0%, rgba(13, 96, 111, 0) 25.1%),
+      url(../img/garrett-parker-mobil.jpg) no-repeat;
+    background-size: 100%;
+    border-radius: 25px 25px 0 0;
+  }
+}
+
+.top_bar400 {
+  @media (max-width: $mobel-width) {
+    background: linear-gradient(180deg, #0d606f 0%, rgba(13, 96, 111, 0) 25.1%);
+  }
+}
+
+h1 {
+  font-family: "Aleo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 96px;
+  color: #ffffff;
+
+  margin: 66px auto 35px auto;
+  @media (max-width: $screen-width) {
+    font-size: 67px;
+    line-height: 80px;
+    margin: 60px auto 0px auto;
+  }
+
+  @media (max-width: $tablet-width) {
+    font-size: 25px;
+    line-height: 33px;
+    margin: 25px auto 3px auto;
+  }
+  @media (max-width: $mobel-width) {
+    display: none;
+  }
+}
+
+p.main_p {
+  font-family: "Aleo";
+  font-style: italic;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-top: 0px;
+  @media (max-width: $desktop-width) {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  @media (max-width: $screen-width) {
+    font-size: 14px;
+    line-height: 80px;
+  }
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+.preview {
+  max-width: 920px;
+
+  padding: 55px 19px 120px 11px;
+  @media (max-width: $desktop-width) {
+    padding: 55px 15px 120px 80px;
+  }
+  @media (max-width: $screen-width) {
+    padding: 55px 5px 25px 0;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    padding: 50px 0 25px 0;
+  }
+  @media (max-width: $mobel-width) {
+    width: 100%;
+    padding: 139px 0 50px 0;
+  }
+}
+
+.Rectangle_8 {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  padding: 18px;
+  margin-top: 45px;
+  &_p {
+    font-family: "Aleo";
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    padding-left: 24px;
+
+    color: #f2785c;
+    margin: 0;
+    padding-top: 15px;
+  }
+  @media (max-width: $screen-width) {
+    margin: 1% auto 10px auto;
+    padding: 12px;
+    width: 100%;
+    &_p {
+      font-size: 18px;
+      line-height: 21px;
+      padding-left: 16px;
+      padding-top: 11px;
+    }
+  }
+  @media (max-width: $tablet-width) {
+    padding: 9px;
+    margin: 1% auto 10px auto;
+    width: 100%;
+
+    &_p {
+      font-size: 14px;
+      line-height: 17px;
+      padding-left: 6px;
+      padding-top: 8px;
+    }
+  }
+}
+
+.Rectangle {
+  text-decoration: none;
+  font-family: "Red Hat Text";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  /* identical to box height */
+
+  color: #ffffff;
+}
+.Rectangle_button {
+  width: 228px;
+  height: 59px;
+
+  background: #0d606f;
+  box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08),
+    0px 2px 3px rgba(13, 96, 111, 0.16);
+  border-radius: 10px;
+  @media (max-width: $desktop-width) {
+    width: 192px;
+    height: 50px;
+  }
+  @media (max-width: $screen-width) {
+    width: 147px;
+    height: 40px;
+  }
+  @media (max-width: $tablet-width) {
+    width: 92px;
+    height: 30px;
+  }
+}
+
+.Rectangle:hover,
+.Rectangle::after {
+  opacity: 0.95;
+  color: rgb(77, 151, 186);
+  cursor: pointer;
+}
+/*Preview styles end */
+
+h2 {
+  text-align: center;
+  font-family: "Red Hat Text";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 53px;
+
+  color: #f2785c;
+  margin: auto;
+  @media (max-width: $desktop-width) {
+    font-size: 32px;
+    line-height: 43px;
+  }
+  @media (max-width: $screen-width) {
+    font-size: 26px;
+    line-height: 33px;
+  }
+
+  @media (max-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  @media (max-width: $mobel-width) {
+    font-size: 14px;
+    line-height: 19px;
+    margin-top: -10px;
+  }
+}
+
+.steps {
+  margin-top: 80px;
+  margin-bottom: 40px;
+  @media (max-width: $screen-width) {
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
+  @media (max-width: $tablet-width) {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  @media (max-width: $mobel-width) {
+    margin-top: 29px;
+    margin-bottom: 40px;
+  }
+}
+.steps_content {
+  display: flex;
+
+  justify-content: space-around;
+
+  margin-top: 40px;
+  margin-bottom: 98px;
+  margin-left: 47px;
+  margin-right: 52px;
+  text-align: center;
+  @media (max-width: $desktop-width) {
+    margin: 35px 40px 86px 45px;
+  }
+  @media (max-width: $screen-width) {
+    margin: 20px 16px 15px 15px;
+  }
+}
+.steps_item1 {
+  width: max-content;
+  @media (max-width: $mobel-width) {
+    margin-left: -33px;
+  }
+}
+.steps_item2 {
+  width: max-content;
+  padding-left: 70px;
+  @media (max-width: $desktop-width) {
+    padding-left: 60px;
+  }
+  @media (max-width: $screen-width) {
+    padding-left: 50px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-left: 40px;
+  }
+  @media (max-width: $mobel-width) {
+    padding-left: 0px;
+  }
+}
+.steps_item3 {
+  width: max-content;
+  @media (max-width: $mobel-width) {
+    margin-right: -35px;
+  }
+}
+.desy_items {
+  overflow: hidden;
+  margin-top: 43px;
+  position: relative;
+  height: 800px;
+  @media (max-width: $tablet-width) {
+    margin-top: 35px;
+    height: 230px;
+  }
+  @media (max-width: $mobel-width) {
+    margin: 0px 10px 40px 10px;
+  }
+}
+
+:root {
+  --ofset-left: 50%;
+  --ofset-translateX: -50%;
+
+  @media (max-width: $mobel-width) {
+    --ofset-left: 0%;
+    --ofset-translateX: 0%;
+  }
+}
+
+.items_destinations {
+  display: flex;
+  width: 2520px;
+  gap: 60px;
+  position: absolute;
+  left: var(--ofset-left);
+  transform: translateX(var(--ofset-translateX));
+
+  @media (max-width: $tablet-width) {
+    background-image: url(../img/svg/ep_arrow-up-bold.svg) no-repeat;
+    background-image: url(../img/svg/ep_arrow-up-bold_left.svg) no-repeat;
+    width: auto;
+    gap: 13px;
+  }
+  @media (max-width: $mobel-width) {
+    margin-top: 20px;
+    justify-content: flex-start;
+
+    gap: 0;
+    width: 300%;
+  }
+}
+
+.transition {
+  transition-duration: 1s;
+}
+
+.desy_item {
+  flex: 1 1 auto;
+
+  @media (max-width: $mobel-width) {
+    flex: 0 0 calc(100% / 3);
+    pointer-events: none;
+  }
+}
+.destin_img {
+  border-radius: 20px;
+  width: auto;
+  @media (max-width: $tablet-width) {
+    width: auto;
+  }
+  @media (max-width: $mobel-width) {
+    width: 100%;
+  }
+}
+.FindMore {
+  font-family: "Red Hat Text";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  color: #ffffff;
+  @media (max-width: $desktop-width) {
+    font-size: 22px;
+    line-height: 26px;
+  }
+  @media (max-width: $screen-width) {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  @media (max-width: $tablet-width) {
+    font-size: 11px;
+    line-height: 18px;
+  }
+  @media (max-width: $mobel-width) {
+    font-size: 11px;
+    line-height: 15px;
+  }
+}
+
+.FindMore:hover,
+.FindMore::after {
+  opacity: 0.95;
+  color: rgb(77, 151, 186);
+  cursor: pointer;
+}
+
+.button {
+  width: 228px;
+  line-height: 50px;
+  background: #0d606f;
+  box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08),
+    0px 2px 3px rgba(13, 96, 111, 0.16);
+  border-radius: 10px;
+
+  display: block;
+  margin: auto;
+  @media (max-width: $desktop-width) {
+    width: 190px;
+  }
+  @media (max-width: $screen-width) {
+    width: 182px;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 137px;
+    height: 30px;
+    line-height: 31px;
+  }
+  @media (max-width: $mobel-width) {
+    width: 92px;
+    height: 30px;
+    line-height: 28px;
+    margin-top: -22px;
+  }
+}
+
+.img_button {
+  @media (max-width: $screen-width) {
+    width: 20px;
+    height: 20px;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 15px;
+    height: 15px;
+  }
+  @media (max-width: $mobel-width) {
+    width: 10px;
+    height: 10px;
+  }
+}
+.stories_name {
+  @media (max-width: $mobel-width) {
+    margin-top: 8%;
+  }
+}
+
+.foter_list {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 141px;
+  margin: 0;
+  margin-right: 120px;
+  @media (max-width: $tablet-width) {
+    margin-right: 1px;
+  }
+}
+
+.foter_item {
+  width: 34px;
+  height: 34px;
+  display: block;
+}
+
+.instagramm {
+  background: url(../img/svg/akar-icons_instagram-fill.svg);
+  background-size: contain;
+}
+.video {
+  background: url(../img/svg/akar-icons_video.svg);
+  background-size: contain;
+}
+.twitter {
+  background: url(../img/svg/akar-icons_twitter-fill.svg);
+  background-size: contain;
+}
+.foter_item {
+  margin-left: 15px;
+}
+
+.Frame_6 {
+  margin: 24px auto 40px auto;
+  display: block;
+}
+
+h3 {
+  font-family: "Aleo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 42px;
+  /* identical to box height */
+
+  color: #0d606f;
+  grid-column: 2;
+  grid-row: 1;
+  margin-top: 0px;
+  @media (max-width: $desktop-width) {
+    font-size: 29px;
+    line-height: 34px;
+  }
+  @media (max-width: $screen-width) {
+    font-size: 23px;
+    line-height: 27px;
+  }
+
+  @media (max-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  @media (max-width: $mobel-width) {
+    font-size: 11px;
+    line-height: 13px;
+    margin-top: 4px;
+    font-weight: 700;
+  }
+}
+
+.p_storie {
+  font-family: "Aleo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #0d606f;
+
+  grid-column: 2;
+  grid-row: 1;
+  margin: 67px 0 0 0;
+
+  @media (max-width: $desktop-width) {
+    font-size: 18px;
+    line-height: 21px;
+    overflow: hidden;
+    margin-top: 58px;
+  }
+  @media (max-width: $screen-width) {
+    font-size: 15px;
+    line-height: 18px;
+    overflow: hidden;
+    margin-top: 30px;
+  }
+
+  @media (max-width: $tablet-width) {
+    font-size: 12px;
+    line-height: 15px;
+    overflow: hidden;
+    margin-top: 28px;
+    height: 106px;
+  }
+  @media (max-width: $mobel-width) {
+    font-size: 9px;
+    line-height: 10.8px;
+
+    height: 87px;
+    overflow: hidden;
+    margin: 28px 0 0 0;
+  }
+}
+
+.img_st {
+  background: url(../img/Rectangle33.jpg) no-repeat;
+  background-size: cover;
+  padding-bottom: 65px;
+  // margin-top: 40px;
+  // @media (max-width: $desktop-width) {
+  //   margin-top: 35px;
+  // }
+  // @media (max-width: $screen-width) {
+  //   margin-top: 30px;
+  // }
+
+  // @media (max-width: $tablet-width) {
+  //   margin-top: 20px;
+  // }
+  @media (max-width: $mobel-width) {
+    background: url(../img/Rectangle28.jpg);
+
+    margin-top: 10px;
+    border-radius: 0 0 31px 31px;
+  }
+}
+
+.foter_p {
+  font-family: "Red Hat Text";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: #ffffff;
+  text-align: center;
+  flex: 1 1 auto;
+  padding-left: 140px;
+  margin: 0;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.wrapper_foter {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  min-height: 65px;
+
+  @media (max-width: $tablet-width) {
+    margin: 0;
+    min-height: 65px;
+    justify-content: center;
+  }
+}
+.wrapper_stories {
+  margin: 0 auto;
+  width: 100%;
+
+  background: rgba(255, 255, 255, 0.7);
+  padding-bottom: 30px;
+  @media (max-width: $mobel-width) {
+    padding-bottom: 1px;
+  }
+}
+
+.stories_items {
+  padding-top: 40px;
+  @media (max-width: $mobel-width) {
+    padding-top: 10px;
+  }
+}
+.stories_item {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+
+  gap: 38px;
+  margin-bottom: 31px;
+  @media (max-width: $desktop-width) {
+    gap: 30px;
+    margin-bottom: 24px;
+  }
+  @media (max-width: $screen-width) {
+    gap: 24px;
+    margin-bottom: 17px;
+  }
+
+  @media (max-width: $tablet-width) {
+    gap: 17px;
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: $mobel-width) {
+    gap: 9px;
+    margin-bottom: 4px;
+  }
+}
+
+.stories_img {
+  border-radius: 20px;
+  filter: drop-shadow(0px 4px 4px #0d606f);
+  @media (max-width: $desktop-width) {
+    width: 320px;
+    height: 212px;
+  }
+  @media (max-width: $screen-width) {
+    width: 256px;
+    height: 180px;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 205px;
+    height: 153px;
+  }
+  @media (max-width: $mobel-width) {
+    width: 155px;
+    height: 130px;
+  }
+}
+
+.stories_button {
+  margin-top: 44px;
+  @media (max-width: $mobel-width) {
+    margin-top: -11px;
+    margin-bottom: 12px;
+  }
+}
+.foter_a:hover,
+.foter_a::after {
+  opacity: 0.95;
+  color: rgb(77, 151, 186);
+  cursor: pointer;
+}
+
+.name_img {
+  font-family: "Red Hat Text";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 42px;
+
+  color: #ffffff;
+  display: block;
+  position: relative;
+  bottom: 80px;
+  left: 15px;
+
+  @media (max-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  @media (max-width: $mobel-width) {
+    font-size: 20px;
+    line-height: 26px;
+    bottom: 75%;
+    left: 15px;
+  }
+}
+
+.steps_p {
+  font-family: "Aleo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  /* identical to box height */
+
+  color: #0d606f;
+  margin-top: 24px;
+  margin-bottom: 0;
+
+  @media (max-width: $desktop-width) {
+    font-size: 18px;
+    line-height: 23px;
+    margin-top: 23px;
+  }
+  @media (max-width: $screen-width) {
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: 22px;
+  }
+
+  @media (max-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: 21px;
+  }
+  @media (max-width: $mobel-width) {
+    font-size: 10px;
+    line-height: 12px;
+    margin-top: 15px;
+    width: 94px;
+    text-align: left;
+    margin-left: 16px;
+  }
+}
+
+.steps_p2 {
+  @media (max-width: $mobel-width) {
+    width: 113px;
+    text-align: left;
+    margin-left: 1px;
+  }
+}
+
+.slaider_control_label {
+  width: 20px;
+  height: 20px;
+  background: rgba(242, 120, 92, 0.5);
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+  @media (max-width: $mobel-width) {
+    width: 8px;
+    height: 8px;
+    margin-right: -10px;
+    margin-left: 13px;
+  }
+}
+
+.slaider_controls input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.slaider_controls input:checked + .slaider_control_label {
+  background: #f2785c;
+}
+
+.slaider_controls {
+  width: max-content;
+  margin: 20px auto 37px;
+  @media (max-width: $mobel-width) {
+    display: block;
+    position: absolute;
+    margin-top: -80px;
+    margin-left: 42%;
+  }
+}
+
+.p_mobil {
+  grid-column: 2;
+  grid-row: 2;
+  font-family: "Aleo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #0d606f;
+  margin-top: -65px;
+
+  @media (max-width: $desktop-width) {
+    margin-top: -55px;
+    font-size: -18px;
+    line-height: 21px;
+  }
+  @media (max-width: $screen-width) {
+    margin-top: -45px;
+    font-size: -15px;
+    line-height: 17px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-top: -35px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  @media (max-width: $mobel-width) {
+    grid-column: 2;
+    grid-row: 2;
+    margin-top: -25px;
+    font-family: "Aleo";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 9px;
+    line-height: 10.8px;
+    height: 10px;
+  }
+}
+
+.main {
+  margin-bottom: -65px;
+}
+.steps_pp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: -14px;
+}
+
+.arrow_spain {
+  @media (max-width: $mobel-width) {
+  }
+}
+
+.arrow_disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.button_right {
+  @media (max-width: $mobel-width) {
+    background: none;
+    right: 0;
+    top: 55%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+}
+
+.button_left {
+  @media (max-width: $mobel-width) {
+    background: none;
+    left: 0;
+    top: 55%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+}
+
+.arrow_img {
+  burger_line {
+    margin-bottom: -14px;
+
+    margin-left: -16px;
+  }
+}
+
+.button_arrow {
+  display: none;
+  @media (max-width: $mobel-width) {
+    display: block;
+    position: absolute;
+  }
+}
+
+.burger {
+  display: none;
+  @media (max-width: $mobel-width) {
+    width: 35px;
+    height: 32px;
+    padding: 8px 4.38px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-bottom: 3px;
+    margin-right: 3px;
+  }
+
+  input {
+    display: none;
+  }
+}
+.burger_open {
+  position: fixed;
+  z-index: 7;
+  animation: xxx 0.5s forwards;
+  margin-top: 3px;
+  padding-left: 16px;
+  .line_one {
+    animation: line_one 0.1s forwards;
+    transform-origin: top left;
+    width: 21px;
+    height: 1px;
+    border-radius: 0;
+  }
+  .line_three {
+    animation: line_three 0.1s forwards;
+    transform-origin: bottom left;
+    width: 21px;
+    height: 1px;
+    border-radius: 0;
+  }
+  .line_two {
+    animation: line_two forwards;
+  }
+}
+
+@keyframes xxx {
+  from {
+    top: 0;
+    right: -30px;
+  }
+  to {
+    top: 6px;
+    right: 125px;
+  }
+}
+
+@keyframes line_one {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes line_two {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes line_three {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(-45deg);
+  }
+}
+
+.burger_line {
+  background-color: #ffffff;
+  width: 26.25px;
+  height: 2.67px;
+  border-radius: 5px;
+}
+
+.header_item_li_burger {
+  display: none;
+  @media (max-width: $mobel-width) {
+    display: block;
+  }
+}
+
+.pop_up {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(20, 20, 20, 0.25);
+  z-index: 25;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.popup_p {
+  font-family: "Aleo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+
+  color: #0d606f;
+  margin: 25px auto 30px auto;
+
+  text-align: center;
+}
+.popup_a_Forgot {
+  font-family: "Aleo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  text-decoration-line: underline;
+  color: #0d606f;
+  margin: 10px 245px 26px 246px;
+  text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+}
+
+.popup_button {
+  width: 560px;
+  height: 56px;
+  margin: 0px 45px 20px 45px;
+  border-radius: 10px;
+}
+
+.popup_facebook {
+  background: #1877f2;
+  box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08),
+    0px 2px 3px rgba(13, 96, 111, 0.16);
+
+  color: #ffffff;
+}
+
+.popup_gogle {
+  background: #ffffff;
+  box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08),
+    0px 2px 3px rgba(13, 96, 111, 0.16);
+  border-radius: 10px;
+
+  color: #0d606f;
+}
+
+.popup_img {
+  padding-left: 11px;
+}
+
+.p_button_popup {
+  display: inline;
+  font-family: "Red Hat Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  padding-left: 8px;
+}
+
+.popup_or {
+  width: 256px;
+  height: 0px;
+  left: 344px;
+  top: 267px;
+  margin-top: 24px;
+  border: 1px solid rgba(13, 96, 111, 0.5);
+}
+
+.span_or {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.oror {
+  margin: 13px;
+}
+
+.input_popup {
+  width: 560px;
+  height: 54px;
+  background: #ffffff;
+  box-shadow: inset 0px 0px 3px rgb(13 96 111 / 8%),
+    inset 0px 2px 3px rgb(13 96 111 / 16%);
+  border-radius: 10px;
+  border: none;
+}
+
+.emailBox {
+  display: flex;
+  flex-direction: column;
+  margin: -5px 45px;
+}
+
+.label_popup {
+  font-family: "Aleo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  margin-top: 5px;
+  color: #0d606f;
+}
+
+.sign_in {
+  font-family: "Red Hat Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  margin-top: 14px;
+  color: #ffffff;
+}
+.popup_sign {
+  width: 560px;
+  height: 54px;
+
+  background: #0d606f;
+  box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08),
+    0px 2px 3px rgba(13, 96, 111, 0.16);
+  border-radius: 10px;
+  margin: 33px 45px 10px 45px;
+}
+
+.popup_end {
+  width: 560px;
+  height: 0px;
+
+  margin: 20px 45px 0px 45px;
+  border: 1px solid rgba(13, 96, 111, 0.5);
+}
+.p_don_have {
+  font-family: "Aleo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  color: rgba(13, 96, 111, 0.5);
+
+  text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+}
+.popup_register {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 215px 23px 215px;
+}
+
+.a_popup_register {
+  margin: 15px 2px;
+  font-family: "Aleo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+
+  text-decoration-line: underline;
+
+  color: #0d606f;
+
+  text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+}
+
+.popup_content {
+  width: 650px;
+  height: 660px;
+  background: linear-gradient(177.09deg, #ffffff 6.15%, #0d606f 202.69%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  display: none;
+}
+
+.popup_visible {
+  display: block;
+}
+
+.popup_sing_content {
+  height: 436px;
+}
+
+.popup_register_login {
+  display: flex;
+  flex-direction: row;
+  margin-left: 217px;
+  margin-top: 3px;
+}
+
+.button_account {
+  background-color: #f2785c;
+}
+
+.sign_in:hover,
+.sign_in::after {
+  opacity: 0.95;
+  color: rgb(77, 151, 186);
+  cursor: pointer;
+}
+.button_register {
+  padding: 0;
+  margin: 0;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  text-decoration: underline;
+  font-family: "Aleo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+
+  color: #0d606f;
+
+  text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+}
